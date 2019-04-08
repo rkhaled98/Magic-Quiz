@@ -1,5 +1,7 @@
 body{
     font-family: 'Nova Mono', monospace;
+    background-color: wheat;
+    color: purple;
 }
 
 .quiz{
@@ -73,4 +75,9 @@ button{
 .result{
     margin-top: 20px;
     display: none;
+}
+
+footer{
+    height: 200px;
+    margin-top: 200px;
 }
