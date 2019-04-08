@@ -5,40 +5,108 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="http://livejs.com/live.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <div class="quiz">
-        <h1>What board game are you?</h1>
+        <h1>What card game are you?</h1>
         <div class="question">
             <h2 class="question-header">Choose a pug below</h2>
             <div class="question-item">
                 <label class="option">
-                    <input type="radio" name="animal" value="puppy" />
+                    <input type="radio" name="dog" value="Exploding Kittens" />
                     <img src="img/pug-690566_640.jpg" />
                 </label>
             </div>
             <div class="question-item">
                 <label class="option">
-                    <input type="radio" name="animal" value="puppy" />
+                    <input type="radio" name="dog" value="Guillotine" />
                     <img src="img/pug2.jpg" />
                 </label>
             </div>
             <div class="question-item">
                 <label class="option">
-                    <input type="radio" name="animal" value="puppy" />
+                    <input type="radio" name="dog" value="Cabo" />
                     <img src="img/pug3.jpg" />
                 </label>
             </div>
             <div class="question-item">
                 <label class="option">
-                    <input type="radio" name="animal" value="puppy" />
+                    <input type="radio" name="dog" value="Mario Kart" />
                     <img src="img/pug4.jpg" />
                 </label>
             </div>
         </div>
+        <!-- End question div-->
+
+        <div class="question">
+            <h2 class="question-header">Choose a kitten below</h2>
+            <div class="question-item">
+                <label class="option">
+                    <input type="radio" name="cat" value="Exploding Kittens" />
+                    <img src="img/kitty1.jpg" />
+                </label>
+            </div>
+            <div class="question-item">
+                <label class="option">
+                    <input type="radio" name="cat" value="Guillotine" />
+                    <img src="img/kitty2.jpg" />
+                </label>
+            </div>
+            <div class="question-item">
+                <label class="option">
+                    <input type="radio" name="cat" value="Cabo" />
+                    <img src="img/kitty3.jpg" />
+                </label>
+            </div>
+            <div class="question-item">
+                <label class="option">
+                    <input type="radio" name="cat" value="Mario Kart" />
+                    <img src="img/kitty4.jpg" />
+                </label>
+            </div>
+        </div>
+        <!-- End question div-->
+
+        <div class="question">
+            <h2 class="question-header">Choose a kitten below</h2>
+            <div class="question-item">
+                <label class="option">
+                    <input type="radio" name="rafi" value="Exploding Kittens" />
+                    <img src="img/kitty1.jpg" />
+                </label>
+            </div>
+            <div class="question-item">
+                <label class="option">
+                    <input type="radio" name="rafi" value="Guillotine" />
+                    <img src="img/kitty2.jpg" />
+                </label>
+            </div>
+            <div class="question-item">
+                <label class="option">
+                    <input type="radio" name="rafi" value="Cabo" />
+                    <img src="img/kitty3.jpg" />
+                </label>
+            </div>
+            <div class="question-item">
+                <label class="option">
+                    <input type="radio" name="rafi" value="Mario Kart" />
+                    <img src="img/kitty4.jpg" />
+                </label>
+            </div>
+        </div>
+        <!-- End question div-->
+
+        <button id="submit">What Board Game Am I?</button>
+
+        <div class="result">
+            <h1>YOU ARE</h1>
+        </div>
     </div>
+    <!--End main quiz div-->
 
 
 </body>
