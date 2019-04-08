@@ -1,0 +1,66 @@
+body{
+    font-family: 'Nova Mono', monospace;
+}
+
+.quiz{
+    display: flex;
+    flex-flow: column wrap;
+    /* justify-content: flex-end; */
+    justify-content: center;
+    /* justify-content: flex-start | flex-end | center | space-between | space-around */
+    align-items: center;
+    /* align-items: flex-start | flex-end | center | baseline | stretch */
+    flex-direction: column;
+    /*flex-direction: row | row-reverse | column | column-reverse*/
+}
+
+.question-header{
+    width:100%;
+}
+
+.question{
+    width:500px;
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: flex-end; */
+    justify-content: center;
+    /* justify-content: flex-start | flex-end | center | space-between | space-around */
+    align-items: center;
+    /* align-items: flex-start | flex-end | center | baseline | stretch */
+    flex-direction: row;
+    /*flex-direction: row | row-reverse | column | column-reverse*/
+}
+
+.question-item{
+    flex: 1 0 50%;
+    flex-basis: 240px;
+    flex-grow:1;
+}
+
+.question-item{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.option > img{
+    opacity: 0.8;
+    transition: 0.1s;
+    border-radius: 12px;
+}
+
+.option > img:hover{
+    opacity: 0.9;
+}
+
+label > img{
+    width:240px;
+    z-index:1;
+}
+input[type=radio] {
+    display: none;
+}
+input[type=radio]:checked + img {
+    opacity: 1;
+    transform: scale(1.05);
+    z-index:30;
+}
