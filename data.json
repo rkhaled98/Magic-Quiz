@@ -106,24 +106,70 @@
         },
         {
             "question_id": "q4",
-            "question_name": "Choose a Dartmouth CS Course",
+            "question_name": "Choose a Roslin's Sushi",
             "question_img_url": "img/dartmouthbg.jpg",
             "answers": [
                 {
-                    "text": "COSC-31",
+                    "text": "Dragon Roll",
                     "outcome": "1"
                 },
                 {
-                    "text": "COSC-52",
+                    "text": "Crunchy Crab Roll",
                     "outcome": "3"
                 },
                 {
-                    "text": "COSC-78",
+                    "text": "Spicy Tuna Roll",
                     "outcome": "2"
                 },
                 {
-                    "text": "COSC-1",
+                    "text": "Rainbow Roll",
                     "outcome": "4"
+                }
+            ]
+        },
+        {
+            "question_id": "q5",
+            "question_name": "Choose a git command",
+            "question_img_url": "img/binary.jpg",
+            "answers": [
+                {
+                    "text": "add",
+                    "outcome": "1"
+                },
+                {
+                    "text": "rebase",
+                    "outcome": "2"
+                },
+                {
+                    "text": "merge",
+                    "outcome": "3"
+                },
+                {
+                    "text": "clone",
+                    "outcome": "4"
+                }
+            ]
+        },
+        {
+            "question_id": "q6",
+            "question_name": "Choose a text editor",
+            "question_img_url": "img/binary.jpg",
+            "answers": [
+                {
+                    "text": "Atom",
+                    "outcome": "1"
+                },
+                {
+                    "text": "VS Code",
+                    "outcome": "3"
+                },
+                {
+                    "text": "Vi",
+                    "outcome": "4"
+                },
+                {
+                    "text": "Emacs",
+                    "outcome": "2"
                 }
             ]
         }
