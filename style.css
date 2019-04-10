@@ -89,11 +89,14 @@ button{
 /* Modal Content/Box */
 .modal-content {
     background-color: #b8aeae;
-    margin: 15% auto; /*15% from the top and centered*/
-    padding: 20px;
+    margin: auto; 
+    /* 15% from the top and centered */
+    padding: 3px;
     border: 1px solid #888;
     width: 50%; /*Could be more or less, depending on screen size*/
+    min-height: 350px;
     height: 55%;
+    min-width: 300px;
     /* width: 1000px; */
     /* height: 750px; */
   }
@@ -139,7 +142,7 @@ button{
 
 #result-img{
     width: 50%;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     align-self: flex-end;
     margin-left: auto;
 }
@@ -156,6 +159,32 @@ footer{
     height: 200px;
     margin-top: 200px;
 }
+
+@media only screen and (max-width: 525px) {
+    .question{
+        margin-top: 15px;
+        /* width:500px; */
+        display: flex;
+        flex-flow: column wrap;
+        /* justify-content: flex-end; */
+        justify-content: center;
+        /* justify-content: flex-start | flex-end | center | space-between | space-around */
+        align-items: center;
+        /* align-items: flex-start | flex-end | center | baseline | stretch */
+        /* flex-direction: row; */
+        /*flex-direction: row | row-reverse | column | column-reverse*/
+    }
+    .question-item{
+        flex: 1 0 50%;
+        flex-basis: 120px;
+        flex-grow:1;
+    }
+    
+    .question-item{
+        /* margin-top: 5px;
+        margin-left: 5px; */
+    }
+  }
 
 
 

