@@ -186,7 +186,7 @@ button{
     background-color: #b8aeae;
     margin: auto; 
     /* 15% from the top and centered */
-    padding: 3px;
+    padding: 12px;
     border: 1px solid #888;
     width: 50%; /*Could be more or less, depending on screen size*/
     min-height: 350px;
