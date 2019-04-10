@@ -103,6 +103,29 @@
                     "outcome": "3"
                 }
             ]
+        },
+        {
+            "question_id": "q4",
+            "question_name": "Choose a Dartmouth CS Course",
+            "question_img_url": "img/dartmouthbg.jpg",
+            "answers": [
+                {
+                    "text": "COSC-31",
+                    "outcome": "1"
+                },
+                {
+                    "text": "COSC-52",
+                    "outcome": "3"
+                },
+                {
+                    "text": "COSC-78",
+                    "outcome": "2"
+                },
+                {
+                    "text": "COSC-1",
+                    "outcome": "4"
+                }
+            ]
         }
     ]
 }

@@ -5,6 +5,7 @@ $('#submit').on('click', function (e) {
     }).toArray();
 
     $.getJSON("data.json", function (data) {
+        // console.log(data);
         let num_qs = data.questions.length;
         modal.style.display = "block";
         if (choices.length != num_qs) {
@@ -69,6 +70,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 
 btn.onclick = function () {
+    // console.log(this);
     modal.style.display = "block";
 }
 
@@ -84,6 +86,54 @@ window.onclick = function (event) {
     }
 }
 
+$("div").click( () =>{
+    // console.log(this);
+});
+
+$('input').change(()=>{
+    // console.log(this);
+})
+
+$("input").on("change",function() {
+    alert(this.value);
+});
+
+$(document).on("click", function (event) {
+    // console.log(event.target.parentNode.parentNode.parentNode);
+    
+    $(event.target.parentNode.parentNode.parentNode).children().each(function(){
+        if ($($(this)[0].children[0].children[0])[0] === undefined){
+            
+        }
+        else{
+            if(!$($(this)[0].children[0].children[0])[0].checked ){
+                $($(this)[0].children[0].children[1]).css("opacity", "0.3");
+            }
+        // console.log($($($($(this)[0].children[0]))[0].children[1]).css("opacity", "1.0"));
+        // console.log($($($($(this)[0].children[0]))[0].children[1]))
+        }
+    })
+
+    console.log($($(event.target.parentNode)[0].children[1]).css("opacity", "1.0"));
+
+    // todo: simply need to make the clicked element higher opacity, go to event.target.parentNode.img
+    // console.log(event.target.parentNode.parentNode.parentNode);
+});
+
+// $('img').on("click", function(event){
+//     console.log(event.target);
+// })
+
+// $('input').on("click", function(event){
+//     console.log(event.target);
+// })
+
+// $(document).on("click", function () {
+//     var clickedBtnID = $(this); // or var clickedBtnID = this.id
+//     console.log(clickedBtnID);
+//  });
+
+
 $.getJSON("data.json", function (data) {
     $('#quiz_title').text(`${data.title}`);
     data.questions.forEach((question, i) => {
@@ -92,7 +142,6 @@ $.getJSON("data.json", function (data) {
         //     <div id= "${question.question_id}" class="question">
         //     <h2 class="question-header">${question.question_name}</h2>
         //     `);
-
         $(`
             <div id= "${question.question_id}" class="question">
             <div class="question-header-div">
@@ -101,15 +150,29 @@ $.getJSON("data.json", function (data) {
             
             `).insertBefore("#submit");
         question.answers.forEach((answer, ia) => {
-            $(`#${question.question_id}`).append(
-                `
-            <div class="question-item">
-                <label class="option">
-                    <input type="radio" name="${question.question_name}" value="${answer.outcome}" />
-                    <img src="${answer.img_url}" />
-                </label>
-            </div> `
-            );
+            if (answer.text == "") {
+                $(`#${question.question_id}`).append(
+                    `
+                <div class="question-item">
+                    <label class="option">
+                        <input type="radio" name="${question.question_name}" value="${answer.outcome}" />
+                        <img src="${answer.img_url}" />
+                    </label>
+                </div> `
+                );
+            }
+            else{
+                $(`#${question.question_id}`).append(
+                    `
+                <div class="question-item">
+                    <label class="option">
+                        <input type="radio" name="${question.question_name}" value="${answer.outcome}" />
+                        <h1 class="question-text-choice"> ${answer.text} </h1>
+                    </label>
+                </div> `
+                ); 
+            }
+
         });
         $(`</div>`).insertBefore('#submit');
         $(`#${question.question_id} > .question-header-div`).css("background-image", `url(${question.question_img_url})`)
