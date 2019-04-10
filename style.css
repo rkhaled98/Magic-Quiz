@@ -2,6 +2,24 @@ body{
     font-family: 'Nova Mono', monospace;
     background-color: wheat;
     color: purple;
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    background-image: url(img/binary.jpg);
+    background-size: cover;
+    width: 100%;
+    /* min-width: 567px; */
+    text-align: center;
+    height: 150px;
+}
+
+header > h2{
+    align-self: flex-end;
+    color: white;
+
 }
 
 .quiz{
@@ -16,8 +34,25 @@ body{
     /*flex-direction: row | row-reverse | column | column-reverse*/
 }
 
+.question-header-div{
+    width:100%;
+    display:flex;
+    justify-content: flex-start;
+    background-image: url(img/kittenbg.jpeg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    height: 150px;
+    border-radius: 12px;
+    /* flex-basis: 500px; */
+    max-height: 200px;
+    /* flex-shrink: 1; */
+
+}
+
 .question-header{
     width:100%;
+    align-self: flex-end;
+    color: white;
 }
 
 .question{
@@ -65,8 +100,29 @@ input[type=radio] {
 }
 input[type=radio]:checked + img {
     opacity: 1;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+    animation-duration: 1s;
+    /* animation-fill-mode: backwards; */
+    /* animation-name: resize; */
+    border: 2px solid red;
+    /* animat */
     z-index:30;
+}
+
+img:hover{
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: resize;
+}
+
+@keyframes resize {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+
+    }
 }
 
 button{
@@ -84,6 +140,7 @@ button{
     /* overflow: auto; */
     background-color: rgba(0, 0, 0, 0.4);
     padding-top: 100px;
+    border-radius: 12px;
 }
 
 /* Modal Content/Box */
@@ -173,6 +230,10 @@ footer{
         /* align-items: flex-start | flex-end | center | baseline | stretch */
         /* flex-direction: row; */
         /*flex-direction: row | row-reverse | column | column-reverse*/
+    }
+
+    .question-header{
+        /* text-align: center; */
     }
     .question-item{
         flex: 1 0 50%;

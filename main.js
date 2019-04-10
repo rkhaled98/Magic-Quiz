@@ -95,7 +95,10 @@ $.getJSON("data.json", function (data) {
 
         $(`
             <div id= "${question.question_id}" class="question">
+            <div class="question-header-div">
             <h2 class="question-header">${question.question_name}</h2>
+            </div>
+            
             `).insertBefore("#submit");
         question.answers.forEach((answer, ia) => {
             $(`#${question.question_id}`).append(
@@ -108,7 +111,8 @@ $.getJSON("data.json", function (data) {
             </div> `
             );
         });
-        $(`</div>`).insertBefore('#submit')
+        $(`</div>`).insertBefore('#submit');
+        $(`#${question.question_id} > .question-header-div`).css("background-image", `url(${question.question_img_url})`)
     })
     // now you can do something with this data. 
     // remember you can only work with the data in this callback

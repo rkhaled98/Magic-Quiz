@@ -25,8 +25,8 @@
     "questions": [
         {
             "question_id": "q1",
-            "question_name": "Choose a kitten below!",
-            "question_img_url": "img/question1.jpg",
+            "question_name": "Choose a kitten!",
+            "question_img_url": "img/kittenbg.jpeg",
             "answers": [
                 {
                     "text": "",
@@ -52,8 +52,8 @@
         },
         {
             "question_id": "q2",
-            "question_name": "Choose a pug below!",
-            "question_img_url": "img/question1.jpg",
+            "question_name": "Choose a pug!",
+            "question_img_url": "img/pugbg.jpg",
             "answers": [
                 {
                     "text": "",
@@ -80,7 +80,7 @@
         {
             "question_id": "q3",
             "question_name": "Choose a Linux Distro!",
-            "question_img_url": "img/question1.jpg",
+            "question_img_url": "img/penguinbg.png",
             "answers": [
                 {
                     "text": "",
