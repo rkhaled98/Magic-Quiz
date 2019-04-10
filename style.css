@@ -6,7 +6,8 @@ body{
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
+    /* button ideas from w3schools */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -22,7 +23,6 @@ header{
     background-image: url(img/binary.jpg);
     background-size: cover;
     width: 100%;
-    /* min-width: 567px; */
     text-align: center;
     height: 150px;
 }
@@ -192,8 +192,6 @@ button{
     min-height: 350px;
     height: 55%;
     min-width: 300px;
-    /* width: 1000px; */
-    /* height: 750px; */
   }
 
   /* The Close Button */
