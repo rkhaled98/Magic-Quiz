@@ -4,42 +4,53 @@ $('#submit').on('click', function (e) {
         return $(radio).val();
     }).toArray();
 
-    // console.log(choices[0]);
-
-    freqs = {};
-    curr_max_val = 0;
-    curr_max_choice = choices[0];
-    // console.log(curr_max_choice);
-    for (var choice in choices) {
-        choice = choices[choice]
-        // console.log(choices);
-        if (freqs[choice] === undefined) {
-            freqs[choice] = 1;
-            if (1 > curr_max_val) {
-                curr_max_val = 1;
-                curr_max_choice = choice;
-            }
+    $.getJSON("data.json", function (data) {
+        let num_qs = data.questions.length;
+        modal.style.display = "block";
+        if (choices.length != num_qs) {
+            modal.style.display = "block";
         }
         else {
-            freqs[choice] = freqs[choice] + 1;
-            if (freqs[choice] > curr_max_val) {
-                curr_max_val = freqs[choice];
-                curr_max_choice = choice;
-            }
-        }
-    }
-    // console.log(curr_max_choice);
+            // console.log(choices[0]);
 
-    $.getJSON("data.json", function (data) {
-        console.log(data.outcomes);
-        console.log(data.outcomes[curr_max_choice[0]]);
-        let el = data.outcomes[curr_max_choice[0]];
-        $('#result-question').text(`${data.title}`);
-        $('#result-you-got').text(`You got: ${el.text}`);
-        $('#result-description').text(`${el.description}`);
-        $('#result-img > img').attr("src", `${el.img}`)
-        $('div.result').show();
+            freqs = {};
+            curr_max_val = 0;
+            curr_max_choice = choices[0];
+            // console.log(curr_max_choice);
+            for (var choice in choices) {
+                choice = choices[choice]
+                // console.log(choices);
+                if (freqs[choice] === undefined) {
+                    freqs[choice] = 1;
+                    if (1 > curr_max_val) {
+                        curr_max_val = 1;
+                        curr_max_choice = choice;
+                    }
+                }
+                else {
+                    freqs[choice] = freqs[choice] + 1;
+                    if (freqs[choice] > curr_max_val) {
+                        curr_max_val = freqs[choice];
+                        curr_max_choice = choice;
+                    }
+                }
+            }
+            // console.log(curr_max_choice);
+
+            $.getJSON("data.json", function (data) {
+                // console.log(data.outcomes);
+                // console.log(data.outcomes[curr_max_choice[0]]);
+                let el = data.outcomes[curr_max_choice[0]];
+                $('#result-question').text(`${data.title}`);
+                $('#result-you-got').text(`You got: ${el.text}`);
+                $('#result-description').text(`${el.description}`);
+                $('#result-img > img').attr("src", `${el.img}`)
+                $('div.result').show();
+            });
+
+        }
     });
+
 
 
     // now you have an array of choices = ["valueofradiobox1", "valueofradiobox2", "valueofradiobox2"]
@@ -82,7 +93,7 @@ $.getJSON("data.json", function (data) {
         //     <h2 class="question-header">${question.question_name}</h2>
         //     `);
 
-            $(            `
+        $(`
             <div id= "${question.question_id}" class="question">
             <h2 class="question-header">${question.question_name}</h2>
             `).insertBefore("#submit");

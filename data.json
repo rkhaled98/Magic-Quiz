@@ -52,28 +52,55 @@
         },
         {
             "question_id": "q2",
-            "question_name": "question2",
+            "question_name": "Choose a pug below!",
             "question_img_url": "img/question1.jpg",
             "answers": [
                 {
                     "text": "",
-                    "img_url": "img/image1.jpg",
+                    "img_url": "img/pug-690566_640.jpg",
                     "outcome": "2"
                 },
                 {
                     "text": "",
-                    "img_url": "img/image2.jpg",
+                    "img_url": "img/pug2.jpg",
+                    "outcome": "1"
+                },
+                {
+                    "text": "",
+                    "img_url": "img/pug3.jpg",
+                    "outcome": "4"
+                },
+                {
+                    "text": "",
+                    "img_url": "img/pug4.jpg",
+                    "outcome": "3"
+                }
+            ]
+        },
+        {
+            "question_id": "q3",
+            "question_name": "Choose a Linux Distro!",
+            "question_img_url": "img/question1.jpg",
+            "answers": [
+                {
+                    "text": "",
+                    "img_url": "img/fedora.png",
                     "outcome": "2"
                 },
                 {
                     "text": "",
-                    "img_url": "img/image3.jpg",
+                    "img_url": "img/arch.png",
                     "outcome": "1"
                 },
                 {
                     "text": "",
-                    "img_url": "img/kitty4.jpg",
-                    "outcome": "1"
+                    "img_url": "img/ubuntu.png",
+                    "outcome": "2"
+                },
+                {
+                    "text": "",
+                    "img_url": "img/kali.png",
+                    "outcome": "3"
                 }
             ]
         }
