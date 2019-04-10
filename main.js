@@ -77,7 +77,7 @@ $(document).on("click", function (event) {
             }
         }
     })
-    console.log($($(event.target.parentNode)[0].children[1]).css("opacity", "1.0"));
+    $($(event.target.parentNode)[0].children[1]).css("opacity", "1.0");
 });
 
 
