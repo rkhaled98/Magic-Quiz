@@ -172,6 +172,29 @@
                     "outcome": "2"
                 }
             ]
+        },
+        {
+            "question_id": "q7",
+            "question_name": "Choose a Dartmouth building",
+            "question_img_url": "img/dartmouthbg.jpg",
+            "answers": [
+                {
+                    "text": "Sudikoff",
+                    "outcome": "1"
+                },
+                {
+                    "text": "LSC",
+                    "outcome": "3"
+                },
+                {
+                    "text": "Baker",
+                    "outcome": "4"
+                },
+                {
+                    "text": "Thayer",
+                    "outcome": "2"
+                }
+            ]
         }
     ]
 }
